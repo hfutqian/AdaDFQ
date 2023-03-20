@@ -1,0 +1,57 @@
+#  ------------ General options ----------------------------------------
+save_path = "./save_ImageNet/"
+dataPath = "dataset_path"
+dataset = "imagenet" # options: imagenet | cifar100/10
+nGPU = 1  # number of GPUs to use by default
+GPU = 0  # default gpu to use, options: range(nGPU)
+visible_devices = "2"
+network = "resnet50"
+# ------------- Data options -------------------------------------------
+nThreads = 8  # number of data loader threads
+
+# ---------- Optimization options --------------------------------------
+nEpochs = 400  # number of total epochs to train 400
+batchSize = 16  # batchsize
+momentum = 0.9  # momentum 0.9
+weightDecay = 1e-4  # weight decay 1e-4
+opt_type = "SGD"
+warmup_epochs = 100 # The number of epochs for warmup, 50 for 4/5 bit
+
+lr_S = 0.0001 # initial learning rate = 0.000001
+lrPolicy_S = "multi_step"  # options: multi_step | linear | exp | const | step
+step_S = [150,300,400]  # step for linear or exp learning rate policy. [200,300,400] for 4 bit, [350,400] for 5 bit 
+decayRate_S = 0.1 # lr decay rate
+
+# ---------- Model options ---------------------------------------------
+experimentID = "imganet_3bit_"
+nClasses = 1000  # number of classes in the dataset
+
+# ---------- Quantization options ---------------------------------------------
+#bit width---3bit, 4bit, 5bit
+qw = 3
+qa = 3
+
+# ---------- Parameter options --------------------------------------
+#Carefully adjusting the parameters can yield the extra gains within an optimal range, as claimed in the parameter study. 
+alpha_ds = 0.2      #default 0.1 for 4 bit
+alpha_as = 0.1
+lambda_l = 0.4      #default 0.3 for 4/5 bit
+lambda_u = 0.8
+beta = 1
+gamma = 1
+
+# ----------KD options ---------------------------------------------
+temperature = 5
+alpha = 1
+
+# ----------Generator options ---------------------------------------------
+latent_dim = 100
+img_size = 224
+channels = 3
+
+lr_G = 0.001       # default 0.001
+lrPolicy_G = "multi_step"  # options: multi_step | linear | exp | const | step
+step_G = [150,300,400]   # step for linear or exp learning rate policy. [200,300,400] for 4 bit, [350,400] for 5 bit
+decayRate_G = 0.1 # lr decay rate
+b1 = 0.5
+b2 = 0.999
