@@ -19,3 +19,14 @@ On ImageNet, taking the pre-trained ResNet-18 as an example, run the following c
 ```
 python main.py --conf_path=./imagenet_res18.hocon --id=01
 ```
+
+## Citation
+```
+@inproceedings{qian2023adaptive,
+  title={Adaptive Data-Free Quantization},
+  author={Qian, Biao and Wang, Yang and Hong, Richang and Wang, Meng},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={7960--7968},
+  year={2023}
+}
+```
