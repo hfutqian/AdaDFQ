@@ -6,6 +6,8 @@ This repository is the official code for the paper "Adaptive Data-Free Quantizat
 To addressed the overfitting and underfitting issues in data-free quantization (DFQ) task, we aim to study several critical questions --- *how to measure the sample adaptability to Q under varied bit-width scenarios? whether the largest adaptability is the best? how to generate the samples with adaptive adapt- ability to improve Q’s generalization?*
 To this end, we revisit DFQ from a zero-sum game perspective upon the sample adaptability between two players — a generator and a quantized network (Q). Following this viewpoint, we further define the disagreement and agreement samples to form two boundaries, where the margin between two boundaries is optimized to adaptively regulate the adaptability of generated samples to Q.
 
+![margin](https://github.com/hfutqian/AdaDFQ/blob/main/images/margin.png)
+
 
 ## Dependencies
 * python3.6
