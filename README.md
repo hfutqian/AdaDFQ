@@ -21,6 +21,7 @@ python main.py --conf_path=./imagenet_res18.hocon --id=01
 ```
 
 ## Citation
+If you find the project codes useful for your research, please consider citing
 ```
 @inproceedings{qian2023adaptive,
   title={Adaptive Data-Free Quantization},
