@@ -2,6 +2,10 @@
 This repository is the official code for the paper "Adaptive Data-Free Quantization" by Biao Qian, Yang Wang (corresponding author: yangwang@hfut.edu.cn), Richang Hong, Meng Wang (CVPR 2023, Vancouver, Canada).
 
 
+## Introduction
+To addressed the overfitting and underfitting issues in data-free quantization task, we aim to study several critical questions --- *how to measure the sample adaptability to Q under varied bit-width scenarios? whether the largest adaptability is the best? how to generate the samples with adaptive adapt- ability to improve Q’s generalization?*
+
+
 ## Dependencies
 * python3.6
 * pytorch1.3.1
