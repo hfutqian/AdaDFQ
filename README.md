@@ -4,7 +4,7 @@ This repository is the official code for the paper "Adaptive Data-Free Quantizat
 
 ## Introduction
 To addressed the overfitting and underfitting issues in data-free quantization (DFQ) task, we aim to study several critical questions --- *how to measure the sample adaptability to Q under varied bit-width scenarios? whether the largest adaptability is the best? how to generate the samples with adaptive adapt- ability to improve Q’s generalization?*
-To this end, we revisit DFQ from a zero-sum game perspective upon the sample adaptability between two players — a generator and a quantized network (Q). Following this viewpoint, we further define the disagreement and agreement samples to form two boundaries, where the margin between two boundaries is optimized to adaptively regulate the adaptability of generated samples to Q.
+To this end, we revisit DFQ from a zero-sum game perspective upon the sample adaptability between two players — a generator and a quantized network (Q). Following this viewpoint, we further define the **disagreement** and **agreement** samples to form two boundaries, where the **margin** between two boundaries is optimized to adaptively regulate the adaptability of generated samples to Q.
 
 ![margin](https://github.com/hfutqian/AdaDFQ/blob/main/images/margin.png)
 
@@ -26,6 +26,11 @@ On ImageNet, taking the pre-trained ResNet-18 as an example, run the following c
 ```
 python main.py --conf_path=./imagenet_res18.hocon --id=01
 ```
+
+## Results
+The performance of our models is measured by Top-1 classification accuracy (%), which is reported below:
+
+![table1](https://github.com/hfutqian/AdaDFQ/blob/main/images/table1.png)
 
 ## Citation
 If you find the project codes useful for your research, please consider citing
